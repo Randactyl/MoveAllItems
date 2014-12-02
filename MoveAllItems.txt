@@ -1,7 +1,7 @@
 ## Title: Move All Items
 ## Author: Randactyl
-## Version: 1.4.1
-## APIVersion: 100009
+## Version: 1.4.1.1
+## APIVersion: 100010
 ## OptionalDependsOn: AdvancedFilters
 
 MoveAllItems.lua
