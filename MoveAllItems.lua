@@ -26,7 +26,7 @@ local function MoveItems(toBagId, fromBagId, items, delayStep)
 	--get number of items in the table (may not need -1, check that error again)
 	local j = #items
 	--for the number of items, from the biggest to smallest slotIndex
-	for i = j, 0, -1 do		
+	for i = j, 1, -1 do		
 		--get info directly from the item, if it is actually an item (why wouldn't it be? dumb game/me...)
 		local fromSlotIndex
 		local stackCount
