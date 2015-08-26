@@ -62,7 +62,6 @@ local function WithdrawAllItems(button)
 	MoveItems(toBagId, fromBagId, items, delayStep)
 end
 
-
 local function DepositAllItems(button)
 	local window = button:GetParent():GetNamedChild("Backpack")
 	local delayStep = 300
