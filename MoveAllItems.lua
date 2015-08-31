@@ -26,7 +26,7 @@ local function MoveItems(toBagId, fromBagId, items, delayStep)
 	--get number of items in the table (may not need -1, check that error again)
 	local j = #items
 	--for the number of items, from the biggest to smallest slotIndex
-	for i = j, 1, -1 do		
+	for i = j, 1, -1 do
 		--get info directly from the item, if it is actually an item (why wouldn't it be? dumb game/me...)
 		local fromSlotIndex
 		local stackCount
@@ -61,7 +61,6 @@ local function WithdrawAllItems(button)
 
 	MoveItems(toBagId, fromBagId, items, delayStep)
 end
-
 
 local function DepositAllItems(button)
 	local window = button:GetParent():GetNamedChild("Backpack")
@@ -112,14 +111,14 @@ local function AddGuildWithdrawButton()
 	guildButton:SetText("Withdraw All")
 	guildButton:SetFont("ZoFontGameBold")
 	guildButton:SetDimensions(110, 20)
-	guildButton:SetAnchor(TOPRIGHT, ZO_GuildBankInfoBarMoney, BOTTOMRIGHT, 5, 0)
+	guildButton:SetAnchor(TOPLEFT, ZO_GuildBankInfoBarAltFreeSlots, BOTTOMLEFT, -5, -5)
 	guildButton:SetHandler("OnClicked", ButtonClickHandler)
 	guildButton:SetMouseEnabled(true)
 	guildButton:SetHidden(true)
 	guildButton:SetNormalFontColor(0.77254903316498, 0.76078432798386, 0.61960786581039, 1)
 	guildButton:SetPressedFontColor(0.68627452850342, 0.68627452850342, 0.68627452850342, 1)
 	guildButton:SetClickSound(SOUNDS.DIALOG_ACCEPT)
-	
+
 	guildButton.deposit = false
 	guildButton.guild = true
 end
@@ -130,7 +129,7 @@ local function AddWithdrawButton()
 	withdrawButton:SetText("Withdraw All")
 	withdrawButton:SetFont("ZoFontGameBold")
 	withdrawButton:SetDimensions(110, 20)
-	withdrawButton:SetAnchor(TOPRIGHT, ZO_PlayerBankInfoBarMoney, BOTTOMRIGHT, 5, 0)
+	withdrawButton:SetAnchor(TOPLEFT, ZO_PlayerBankInfoBarAltFreeSlots, BOTTOMLEFT, -5, -5)
 	withdrawButton:SetHandler("OnClicked", ButtonClickHandler)
 	withdrawButton:SetMouseEnabled(true)
 	withdrawButton:SetHidden(true)
@@ -148,7 +147,7 @@ local function AddDepositButton()
 	depositButton:SetText("Deposit All")
 	depositButton:SetFont("ZoFontGameBold")
 	depositButton:SetDimensions(90, 20)
-	depositButton:SetAnchor(TOPRIGHT, ZO_PlayerInventoryInfoBarMoney, BOTTOMRIGHT, 5, 0)
+	depositButton:SetAnchor(TOPLEFT, ZO_PlayerInventoryInfoBarAltFreeSlots, BOTTOMLEFT, -4, -5)
 	depositButton:SetHandler("OnClicked", ButtonClickHandler)
 	depositButton:SetMouseEnabled(true)
 	depositButton:SetHidden(true)
